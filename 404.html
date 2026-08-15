@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Off the beat — Calliope</title>
+<meta name="theme-color" content="#050609">
+<!--
+  GitHub Pages serves this file for any unknown URL at any depth, so a relative stylesheet
+  path would resolve against the missing path and leave the page unstyled. Rather than couple
+  the page to a base path, the handful of styles it needs are inlined below — this page then
+  renders correctly no matter where it is served from.
+
+  The links are root-absolute and DO carry the Pages project-site base (/calliope-site/).
+  If you move to a custom domain or a user site, replace "/calliope-site/" with "/" here.
+-->
+<style>
+  :root {
+    --ink-900: #090B11; --ink-700: #181C28; --ink-500: #2E3445;
+    --paper-50: #F7F3EA; --paper-200: #D7D0C0; --paper-300: #A8A290; --paper-400: #7C7765;
+    --amber-200: #FFE3A8; --amber-400: #F0B45C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #050609;
+    background-image: radial-gradient(90% 55% at 50% -10%, rgba(240,180,92,0.10), rgba(240,180,92,0) 70%);
+    background-repeat: no-repeat;
+    color: var(--paper-200);
+    font: 16px/1.65 "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--amber-400); text-decoration: none; border-bottom: 1px solid rgba(240,180,92,0.3); }
+  a:hover { color: var(--amber-200); border-bottom-color: rgba(255,227,168,0.7); }
+  .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  header { border-bottom: 1px solid rgba(247,243,234,0.08); }
+  header .wrap { display: flex; align-items: center; min-height: 68px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--paper-50); border-bottom: 0; }
+  .brand-dot {
+    width: 13px; height: 13px; border-radius: 50%; background: var(--amber-200);
+    box-shadow: 0 0 22px rgba(255,227,168,0.8), 0 0 8px rgba(255,227,168,0.9);
+  }
+  .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.375rem; line-height: 1; }
+  main { flex: 1; display: flex; align-items: center; padding: 64px 0; }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif; font-weight: 400;
+    font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; color: var(--paper-50);
+    margin: 0 0 16px;
+  }
+  .lead { font-size: 1.125rem; margin: 0 0 16px; }
+  p { margin: 0 0 16px; max-width: 60ch; }
+  footer {
+    border-top: 1px solid rgba(247,243,234,0.08);
+    padding: 32px 0; color: var(--paper-400); font-size: 0.875rem;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; }
+  footer nav { display: flex; flex-wrap: wrap; gap: 24px; }
+  footer a { color: var(--paper-300); border-bottom: 0; }
+  footer a:hover { color: var(--paper-50); }
+  @media (max-width: 640px) { .wrap { padding: 0 16px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/calliope-site/">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-name">Calliope</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Off the beat</h1>
+    <p class="lead">That page isn&rsquo;t here. Nothing to count along to.</p>
+    <p>
+      Try the <a href="/calliope-site/">home page</a>, the
+      <a href="/calliope-site/support.html">support page</a>, or the
+      <a href="/calliope-site/privacy.html">privacy policy</a>.
+    </p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Calliope</p>
+    <nav>
+      <a href="/calliope-site/">Home</a>
+      <a href="/calliope-site/privacy.html">Privacy</a>
+      <a href="/calliope-site/support.html">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calliope — a rhythm trainer for dancers</title>
+<meta name="description" content="Calliope maps any song's beat on your device, then counts along while you tap to find where the 1 lands. An 8-beat ring, a 32-beat phrase map, and three training modes. iOS and Android, coming soon.">
+<meta name="theme-color" content="#050609">
+<!-- Absolute URLs below assume the GitHub Pages project site. If you point a custom domain
+     here, update the canonical/og:url/og:image on all four pages (see README.md). -->
+<link rel="canonical" href="https://eelnomad.github.io/calliope-site/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Calliope">
+<meta property="og:title" content="Calliope — a rhythm trainer for dancers">
+<meta property="og:description" content="Pick a song. Calliope maps its beat on-device, then counts along while you tap to find the 1.">
+<meta property="og:image" content="https://eelnomad.github.io/calliope-site/assets/og-image.png">
+<meta property="og:url" content="https://eelnomad.github.io/calliope-site/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calliope — a rhythm trainer for dancers">
+<meta name="twitter:description" content="Pick a song. Calliope maps its beat on-device, then counts along while you tap to find the 1.">
+<meta name="twitter:image" content="https://eelnomad.github.io/calliope-site/assets/og-image.png">
+
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preload" href="assets/fonts/InstrumentSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/fonts/SpaceGrotesk-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/calliope-mark.svg" alt="" width="32" height="32">
+      <span class="brand-name">Calliope</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="nav-anchor" href="#how">How it works</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-ring" aria-hidden="true">
+      <!-- The app's signature 8-beat ring: seven counts orbiting a glowing "1". -->
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glowOne" x="-200%" y="-200%" width="500%" height="500%">
+            <feGaussianBlur stdDeviation="9" result="b"></feGaussianBlur>
+            <feMerge>
+              <feMergeNode in="b"></feMergeNode>
+              <feMergeNode in="b"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+        </defs>
+        <circle cx="200" cy="200" r="150" fill="none"
+                stroke="rgba(240,180,92,0.10)" stroke-width="1"></circle>
+        <g class="ring-beat">
+          <circle cx="306.07" cy="93.93" r="9"></circle>
+          <circle cx="350" cy="200" r="9"></circle>
+          <circle cx="306.07" cy="306.07" r="9"></circle>
+          <circle cx="200" cy="350" r="9"></circle>
+          <circle cx="93.93" cy="306.07" r="9"></circle>
+          <circle cx="50" cy="200" r="9"></circle>
+          <circle cx="93.93" cy="93.93" r="9"></circle>
+        </g>
+        <circle class="ring-one" cx="200" cy="50" r="13" filter="url(#glowOne)"></circle>
+      </svg>
+    </div>
+
+    <div class="wrap hero-inner">
+      <h1>Calliope</h1>
+      <p class="hero-tagline">Find the one.</p>
+      <p class="hero-lede">
+        A rhythm trainer for dancers. Pick a song, and Calliope maps its beat right on your
+        device — then the 8-beat ring and 32-beat phrase map glow as you tap to find where
+        the <strong>1</strong> lands.
+      </p>
+
+      <div class="cta">
+        <span class="cta-status">In development</span>
+        <div class="store-badges">
+          <!-- Inert on purpose: Calliope is not on the stores yet, so there is nothing to link to. -->
+          <div class="store-badge" role="img" aria-label="Coming soon to the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4"></path>
+              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
+            </svg>
+            <span class="store-badge-text">
+              <small>Coming soon to</small>
+              <strong>the App Store</strong>
+            </span>
+          </div>
+          <div class="store-badge" role="img" aria-label="Coming soon to Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4"></path>
+              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
+            </svg>
+            <span class="store-badge-text">
+              <small>Coming soon to</small>
+              <strong>Google Play</strong>
+            </span>
+          </div>
+        </div>
+        <a class="btn" href="mailto:eelnomad@gmail.com?subject=Notify%20me%20when%20Calliope%20launches">
+          Email me at launch
+        </a>
+        <p class="cta-note">No list, no newsletter — just a note from a person when it ships.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── how it works ─────────────────────────────────────── -->
+  <section class="section" id="how">
+    <div class="wrap">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">Three steps to the one</h2>
+      <p class="section-intro">
+        No metronome, no click track, no counting along to a fixed tempo. Calliope listens to
+        the actual song and builds a map of where its beats really fall.
+      </p>
+
+      <ol class="steps">
+        <li class="step">
+          <h3>Add a track</h3>
+          <p>
+            Pull in audio from your phone or Drive, or browse the built-in free music library.
+            Your own songs work exactly like the bundled ones.
+          </p>
+        </li>
+        <li class="step">
+          <h3>Calliope maps the beat</h3>
+          <p>
+            A neural beat tracker runs in the background, entirely on your phone, finding every
+            beat and downbeat. Nothing is uploaded. Your microphone is never used.
+          </p>
+        </li>
+        <li class="step">
+          <h3>Tap the one</h3>
+          <p>
+            The count runs live against that map. Tap where you think the phrase resets — then
+            see exactly how far off you were, beat by beat.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── features ─────────────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="wrap">
+      <p class="section-label">What's inside</p>
+      <h2 class="section-title">Built around real songs</h2>
+      <p class="section-intro">
+        Every score is measured against the track's own analyzed beat map — not an assumed
+        tempo and not a fixed phrase length.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card-kicker">On device</span>
+          <h3>Real beat detection</h3>
+          <p>
+            Calliope runs the Beat This! beat-and-downbeat tracker (CPJKU, ISMIR 2024) locally
+            through ExecuTorch. No server round trip, and no network needed to analyze.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card-kicker">The count</span>
+          <h3>Ring and phrase map</h3>
+          <p>
+            An 8-beat ring for the count you dance to, and a 32-beat phrase map above it so you
+            can see where you are in the larger structure of the music.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card-kicker">Modes</span>
+          <h3>Count, Distance, Locate</h3>
+          <p>
+            Follow the count out loud, guess how many beats until the next <strong>1</strong>,
+            or find the <strong>1</strong> cold with no announced target.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card-kicker">Sessions</span>
+          <h3>Fixed ten or endless</h3>
+          <p>
+            Take a tight ten-round set when you have a few minutes, or leave it running
+            endlessly and keep drilling while the track plays on.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card-kicker">Library</span>
+          <h3>Your music, or ours</h3>
+          <p>
+            Add audio files from your phone or Drive, or search the built-in catalogue of freely
+            licensed tracks. Analyzed beat maps are cached, so a track is only mapped once.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card-kicker">Progress</span>
+          <h3>Scores that stay yours</h3>
+          <p>
+            Accuracy, timing and streaks are tracked across sessions — stored on your device
+            only, with no account to create.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── screenshots ──────────────────────────────────────── -->
+  <!--
+    SCREENSHOT SLOTS
+    Drop files into assets/screenshots/ using exactly these names and they appear here
+    automatically — no edit to this file needed:
+      01-start.png  02-analyzing.png  03-trainer.png  04-reveal.png  05-stats.png
+    See assets/screenshots/README.md for sizes. Until a file exists, its frame renders as
+    an empty device rather than a broken image.
+  -->
+  <section class="section" id="screens">
+    <div class="wrap">
+      <p class="section-label">A look inside</p>
+      <h2 class="section-title">Dark, quiet, and built to be glanced at</h2>
+      <p class="section-intro">
+        The interface stays out of the way while you're moving: big counts, soft glow, and
+        nothing that needs reading mid-phrase.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div class="shots" role="group" aria-label="App screenshots">
+
+        <figure class="shot">
+          <div class="phone">
+            <div class="phone-screen">
+              <span class="phone-placeholder">Start</span>
+              <img src="assets/screenshots/01-start.png" alt="Calliope's start screen"
+                   loading="lazy" onerror="this.remove()">
+            </div>
+          </div>
+          <figcaption class="shot-caption">Choose a track and a mode</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="phone">
+            <div class="phone-screen">
+              <span class="phone-placeholder">Analyzing</span>
+              <img src="assets/screenshots/02-analyzing.png" alt="Calliope analyzing a track on device"
+                   loading="lazy" onerror="this.remove()">
+            </div>
+          </div>
+          <figcaption class="shot-caption">The beat map is built on your phone</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="phone">
+            <div class="phone-screen">
+              <span class="phone-placeholder">Trainer</span>
+              <img src="assets/screenshots/03-trainer.png" alt="The 8-beat ring counting during a session"
+                   loading="lazy" onerror="this.remove()">
+            </div>
+          </div>
+          <figcaption class="shot-caption">The 8-beat ring, counting live</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="phone">
+            <div class="phone-screen">
+              <span class="phone-placeholder">Reveal</span>
+              <img src="assets/screenshots/04-reveal.png" alt="The reveal showing how close a tap landed"
+                   loading="lazy" onerror="this.remove()">
+            </div>
+          </div>
+          <figcaption class="shot-caption">See exactly where your tap landed</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <div class="phone">
+            <div class="phone-screen">
+              <span class="phone-placeholder">Stats</span>
+              <img src="assets/screenshots/05-stats.png" alt="Session statistics across practice sessions"
+                   loading="lazy" onerror="this.remove()">
+            </div>
+          </div>
+          <figcaption class="shot-caption">Progress across sessions</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── privacy pitch ────────────────────────────────────── -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="pitch">
+        <h2>Nothing about you leaves your phone</h2>
+        <p>
+          Calliope has no accounts, no ads, and no analytics or tracking SDKs. Beat detection
+          runs locally, and your scores and settings are saved on your device — they're gone
+          when you uninstall.
+        </p>
+        <ul class="pitch-list">
+          <li>No account</li>
+          <li>No ads</li>
+          <li>No analytics</li>
+          <li>No microphone</li>
+          <li>No trackers</li>
+        </ul>
+        <a class="btn btn--ghost" href="privacy.html">Read the privacy policy</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Calliope</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:eelnomad@gmail.com">eelnomad@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

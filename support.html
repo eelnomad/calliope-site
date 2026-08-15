@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Support — Calliope</title>
+<meta name="description" content="Help, troubleshooting and contact details for Calliope, the on-device rhythm trainer for dancers. Report a bug or email us directly.">
+<meta name="theme-color" content="#050609">
+<link rel="canonical" href="https://eelnomad.github.io/calliope-site/support.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Calliope">
+<meta property="og:title" content="Support — Calliope">
+<meta property="og:description" content="Help, troubleshooting and contact details for Calliope, the on-device rhythm trainer for dancers.">
+<meta property="og:image" content="https://eelnomad.github.io/calliope-site/assets/og-image.png">
+<meta property="og:url" content="https://eelnomad.github.io/calliope-site/support.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Support — Calliope">
+<meta name="twitter:description" content="Help, troubleshooting and contact details for Calliope, the on-device rhythm trainer for dancers.">
+<meta name="twitter:image" content="https://eelnomad.github.io/calliope-site/assets/og-image.png">
+
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/calliope-mark.svg" alt="" width="32" height="32">
+      <span class="brand-name">Calliope</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>Support</h1>
+    <p class="sub">Questions, bugs, and how the app behaves. Calliope is made by one person, so
+      you'll be talking to a human rather than a helpdesk.</p>
+  </div>
+</div>
+
+<main id="main">
+  <div class="wrap">
+    <article class="prose">
+
+      <div class="contact-methods">
+        <section class="contact-method">
+          <h2>Email</h2>
+          <p>
+            For anything at all — questions, feedback, feature ideas, or privacy requests.
+            Expect a reply within a few days.
+          </p>
+          <p><a href="mailto:eelnomad@gmail.com?subject=Calliope%20support">eelnomad@gmail.com</a></p>
+        </section>
+
+        <section class="contact-method">
+          <h2>Report a bug</h2>
+          <p>
+            The in-app <b>Report a bug</b> option is best — it attaches diagnostics automatically.
+            You can also use the same form here.
+          </p>
+          <p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz2tw3pTjhSlSCIlRuPJY_2tVXc_lfW6S9yQ45s0Wkl6figQ/viewform">
+              Open the bug report form
+            </a>
+          </p>
+        </section>
+      </div>
+
+      <h2>Frequently asked</h2>
+
+      <div class="faq">
+
+        <details>
+          <summary>Does Calliope listen through my microphone?</summary>
+          <p>
+            No. Calliope never requests or uses microphone access — the app is built with
+            recording explicitly disabled. It analyzes an audio file you have chosen, not sound
+            in the room.
+          </p>
+        </details>
+
+        <details>
+          <summary>Where does my music come from?</summary>
+          <p>
+            Two places, and they behave identically once added. You can add audio files from your
+            phone or from Drive with the <b>+</b> button, or search the built-in library of freely
+            licensed music. Added tracks are copied into the app's own storage so they keep
+            working offline and after a restart.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I need an internet connection?</summary>
+          <p>
+            Not for the part that matters. Beat detection runs entirely on your device, so
+            analysis and training work offline. You only need a connection to browse and pull in
+            tracks from the built-in free music library.
+          </p>
+        </details>
+
+        <details>
+          <summary>What are the three training modes?</summary>
+          <ul>
+            <li><b>Count</b> — follow the count as it runs, and keep your place in the phrase.</li>
+            <li><b>Distance</b> — Calliope names a number of beats; you tap the instant you are
+              exactly that far from the next <b>1</b>.</li>
+            <li><b>Locate</b> — no announced target. You are dropped into the track and tap when
+              you believe the next phrase <b>1</b> lands.</li>
+          </ul>
+          <p>
+            Each can be run as a fixed ten-round session or endlessly. Missing an instant is not
+            fatal — the track keeps playing and the target comes back around on the next phrase,
+            at a small points cost.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why is the detected beat wrong on some tracks?</summary>
+          <p>
+            Beat detection is automatic and, on most steady music, accurate. It struggles with
+            material that has no stable pulse — rubato, heavy syncopation, ambient or free-tempo
+            passages, and very quiet or heavily distorted recordings. If a track is consistently
+            mapped wrong, send it to us through the bug report form and say which one it was.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why does analysis take a moment?</summary>
+          <p>
+            A neural beat tracker is running on your phone's own processor over the whole track.
+            It runs in the background and the result is cached, so each track is only mapped once
+            — after the first pass it opens instantly. Older devices take longer than new ones.
+          </p>
+        </details>
+
+        <details>
+          <summary>Where are my scores stored?</summary>
+          <p>
+            On your device, and only there. There is no account and nothing is synced. Uninstalling
+            the app removes your scores, settings and added tracks. See the
+            <a href="privacy.html">privacy policy</a> for the full picture.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is there an account, an ad, or a tracker anywhere?</summary>
+          <p>
+            No to all three. Calliope has no user accounts, no advertising, and no analytics or
+            crash-reporting SDKs.
+          </p>
+        </details>
+
+      </div>
+
+      <h2>Troubleshooting</h2>
+
+      <h3>Analysis fails or never finishes</h3>
+      <p>
+        Confirm the file actually plays elsewhere, and that it's a normal audio format rather than
+        a video or a DRM-protected download. Very long files take proportionally longer. If it
+        fails on a file that plays fine in other apps, that's a bug worth reporting.
+      </p>
+
+      <h3>No sound during a session</h3>
+      <p>
+        Check the device isn't on silent, that the volume is up, and that no other app has taken
+        over audio output. Disconnecting and reconnecting Bluetooth headphones clears most routing
+        problems.
+      </p>
+
+      <h3>The count feels offset from the music</h3>
+      <p>
+        Bluetooth audio adds latency that varies by device and codec, and it can be enough to push
+        the count visibly out of sync. Try wired headphones or the built-in speaker to tell a
+        latency problem apart from a detection problem.
+      </p>
+
+      <h3>The app is slow or closes unexpectedly</h3>
+      <p>
+        On-device analysis is memory-hungry. Close other apps and try again. If it happens
+        repeatedly, report it with the device model — that detail is the most useful thing in the
+        report.
+      </p>
+
+      <h2>Requirements</h2>
+      <ul class="spec-list">
+        <li><b>iOS</b> <span>iOS 17.0 or later. iPhone and iPad.</span></li>
+        <li><b>Android</b> <span>Android 7.0 (API 24) or later.</span></li>
+        <li><b>Storage</b> <span>Added tracks are copied into the app, so they use space until removed.</span></li>
+        <li><b>Network</b> <span>Optional — needed only for the built-in music library.</span></li>
+      </ul>
+
+      <hr>
+      <p class="fine">
+        Calliope is in development and is not yet on the App Store or Google Play.
+      </p>
+
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Calliope</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:eelnomad@gmail.com">eelnomad@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calliope">
+  <defs>
+    <filter id="glowOne" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.4" result="b"></feGaussianBlur>
+      <feMerge><feMergeNode in="b"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+    </filter>
+  </defs>
+
+  <g fill="#E89A3C" opacity="0.32">
+    <circle cx="48.99" cy="20.51" r="3"></circle>
+    <circle cx="52.49" cy="32" r="3"></circle>
+    <circle cx="48.99" cy="43.49" r="3"></circle>
+    <circle cx="32" cy="51" r="3"></circle>
+    <circle cx="15.01" cy="43.49" r="3"></circle>
+    <circle cx="11.51" cy="32" r="3"></circle>
+    <circle cx="15.01" cy="20.51" r="3"></circle>
+  </g>
+  <circle cx="32" cy="13" r="4.4" fill="#FFE3A8" filter="url(#glowOne)"></circle>
+</svg>

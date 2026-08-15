@@ -1,0 +1,134 @@
+/* ============================================================
+   Calliope — design tokens
+   Ported from the app's design system:
+     ~/Projects/calliope/src/design-system/tokens/*.css
+     ~/Projects/calliope/src/design-system/theme.ts
+   Dark-first, and dark-only: the app runs userInterfaceStyle "dark",
+   so the site does not define a light palette. The signature is GLOW —
+   light emerging from the dark — not drop shadows.
+   Reference the semantic aliases below, not the raw scales.
+   ============================================================ */
+
+:root {
+  /* ---- Ink: the dark canvas ---- */
+  --ink-1000: #050609;
+  --ink-900:  #090B11;
+  --ink-850:  #0D0F17;
+  --ink-800:  #11141E;
+  --ink-700:  #181C28;
+  --ink-600:  #222736;
+  --ink-500:  #2E3445;
+  --ink-400:  #3C4356;
+
+  /* ---- Paper: warm whites (text on dark) ---- */
+  --paper-50:  #F7F3EA;
+  --paper-100: #EDE7DA;
+  --paper-200: #D7D0C0;
+  --paper-300: #A8A290;
+  --paper-400: #7C7765;
+  --paper-500: #565241;
+
+  /* ---- Amber: counts, structure, brand ---- */
+  --amber-200: #FFE3A8;
+  --amber-300: #F7C977;
+  --amber-400: #F0B45C;
+  --amber-500: #E89A3C;
+  --amber-600: #CE7E26;
+  --amber-700: #A4611A;
+  --amber-900: #3A2710;
+
+  /* ---- Signal: the live "listening" teal ---- */
+  --signal-200: #B8F2E6;
+  --signal-300: #7FE3CF;
+  --signal-400: #45D2B6;
+  --signal-500: #21B89B;
+  --signal-600: #149079;
+  --signal-900: #0A2C28;
+
+  /* ---- Semantic surfaces ---- */
+  --surface-rest:       #050609;
+  --surface-app:        #090B11;
+  --surface-inset:      #0D0F17;
+  --surface-raised:     #11141E;
+  --surface-card:       #181C28;
+  --surface-card-hover: #222736;
+
+  /* ---- Semantic text ---- */
+  --text-strong:   #F7F3EA;
+  --text-body:     #D7D0C0;
+  --text-muted:    #A8A290;
+  --text-faint:    #7C7765;
+  --text-on-amber: #1A1206;
+
+  /* ---- Borders ---- */
+  --border-subtle:  rgba(247, 243, 234, 0.08);
+  --border-default: rgba(247, 243, 234, 0.14);
+  --border-strong:  rgba(247, 243, 234, 0.24);
+
+  /* ---- Brand ---- */
+  --brand:       #E89A3C;
+  --brand-hover: #F0B45C;
+  --brand-press: #CE7E26;
+  --beat-one:    #FFE3A8;
+  --beat-rest:   #E89A3C;
+  --listening:   #45D2B6;
+
+  /* ---- Elevation (reads on near-black; deep + soft) ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.55);
+  --edge-top:  inset 0 1px 0 rgba(247, 243, 234, 0.05);
+
+  /* ---- Glow: the brand signature ---- */
+  --glow-amber-sm:  0 0 12px rgba(240, 180, 92, 0.35);
+  --glow-amber-md:  0 0 28px rgba(240, 180, 92, 0.45), 0 0 6px rgba(255, 227, 168, 0.4);
+  --glow-amber-lg:  0 0 64px rgba(240, 180, 92, 0.5), 0 0 18px rgba(255, 227, 168, 0.55);
+  --glow-one:       0 0 80px rgba(255, 227, 168, 0.65), 0 0 24px rgba(255, 227, 168, 0.8);
+  --glow-signal-sm: 0 0 12px rgba(69, 210, 182, 0.35);
+  --glow-signal-md: 0 0 30px rgba(69, 210, 182, 0.45), 0 0 8px rgba(127, 227, 207, 0.4);
+
+  /* ---- Radial blooms (place behind a count or ring) ---- */
+  --bloom-amber:  radial-gradient(closest-side, rgba(240, 180, 92, 0.28), rgba(240, 180, 92, 0) 72%);
+  --bloom-one:    radial-gradient(closest-side, rgba(255, 227, 168, 0.40), rgba(255, 227, 168, 0) 70%);
+  --bloom-signal: radial-gradient(closest-side, rgba(69, 210, 182, 0.26), rgba(69, 210, 182, 0) 72%);
+  --vignette:     radial-gradient(120% 100% at 50% 38%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.55) 100%);
+
+  /* ---- Type families (see fonts.css for the @font-face rules) ---- */
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans:  "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:  "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ---- Type scale ---- */
+  --type-xs:   0.75rem;   /* 12 */
+  --type-sm:   0.875rem;  /* 14 */
+  --type-base: 1rem;      /* 16 */
+  --type-lg:   1.125rem;  /* 18 */
+  --type-xl:   1.375rem;  /* 22 */
+  --type-2xl:  1.75rem;   /* 28 */
+  --type-3xl:  2.25rem;   /* 36 */
+  --type-display: 3rem;   /* 48 */
+
+  /* ---- Spacing: 8px rhythm ---- */
+  --s1: 4px;   --s2: 8px;   --s3: 12px;  --s4: 16px;
+  --s5: 24px;  --s6: 32px;  --s7: 40px;  --s8: 48px;
+  --s9: 64px;  --s10: 80px; --s12: 96px; --s16: 128px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Motion: everything breathes, nothing bounces ---- */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:  160ms;
+  --dur-base:  260ms;
+  --dur-slow:  480ms;
+  --dur-bloom: 1400ms;
+
+  /* ---- Layout ---- */
+  --measure: 68ch;      /* prose column */
+  --page-max: 1120px;   /* widest content rail */
+}
